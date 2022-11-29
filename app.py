@@ -40,9 +40,9 @@ for idx, i in enumerate(name_list):
 
 print("Done - Created by fiq")
 
-sender_email = "taufiq@wbi.ac.id"
-sender_name = "Taufiqurrahman"
-password = "fzlvwlxpcxhowjrl"
+sender_email = "email"
+sender_name = "name"
+password = "app_password"
 
 receiver_emails = data['Email'].to_list()
 receiver_names = data['Name'].to_list()
