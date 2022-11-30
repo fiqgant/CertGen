@@ -40,9 +40,9 @@ for idx, i in enumerate(name_list):
 
 print("Done - Created by fiq")
 
-sender_email = "email"
-sender_name = "name"
-password = "app_password"
+sender_email = "taufiq@wbi.ac.id"
+sender_name = "Taufiqurrahman"
+password = "fzlvwlxpcxhowjrl"
 
 receiver_emails = data['Email'].to_list()
 receiver_names = data['Name'].to_list()
@@ -51,16 +51,17 @@ for receiver_email, receiver_name in zip(receiver_emails, receiver_names):
 
     print("Sending to " + receiver_name)
     msg = MIMEMultipart()
-    msg['Subject'] = 'Certificate of Participation | ' + receiver_name + ' | TRPL PWBI'
+    msg['Subject'] = 'TEST-Certificate of Participation | ' + receiver_name + ' | TRPL PWBI'
     msg['From'] = formataddr((sender_name, sender_email))
     msg['To'] = formataddr((receiver_name, receiver_email))
 
     msg.attach(MIMEText("""Hello """ + receiver_name +""",
-                            <p>Thank you for Participation. We have attached the Certificate of Participation below in the email. We look forward to seeing you for next program.
-                            
+                            <p>Thank you for Participation. We have attached the Certificate of 
+                            Participation below in the email. We look forward to seeing you for next program.
                             </p>
-
-                            Regards, <br> Team TRPL
+                            Regards,
+                            <br>
+                            Team TRPL
                             <br>
                             <br>
                             <i> NOTE: G-Mail renders a low resolution in the preview, Download Certificate for higher resolution.
@@ -96,4 +97,3 @@ for receiver_email, receiver_name in zip(receiver_emails, receiver_names):
     finally:
         print('Closing Server.')
         server.quit()
-        
